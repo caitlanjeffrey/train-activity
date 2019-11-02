@@ -1,0 +1,34 @@
+body {
+
+}
+
+.jumbotron {
+    background-image: url("../images/amtrak-train-ventura-california.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 400px;
+    color: #ffffff;
+    margin: 0px;
+}
+
+#home-page {
+    width: 50%;
+    height: 40px;
+    color: #ffffff;
+    background-color: #0c40e6;
+    border-radius: 0;
+}
+
+#scheduler-page {
+    width: 50%;
+    height: 40px;
+    color: #ffffff;
+    background-color: #0c40e6;
+    border-radius: 0;
+}
+
+#submit {
+    color: #ffffff;
+    background-color: #0c40e6;
+}
