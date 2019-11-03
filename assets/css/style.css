@@ -1,7 +1,7 @@
-body {
 
+.navigation {
+    background-color: #0c40e6;
 }
-
 .jumbotron {
     background-image: url("../images/amtrak-train-ventura-california.jpg");
     background-size: cover;
@@ -12,24 +12,42 @@ body {
     margin: 0px;
 }
 
-#home-page {
+#buy-tickets, #departures {
     width: 50%;
     height: 40px;
+    padding: 0;
     color: #ffffff;
     background-color: #0c40e6;
     border-radius: 0;
     border-right-color: #ffffff 3px;
 }
 
-#scheduler-page {
-    width: 50%;
-    height: 40px;
-    color: #ffffff;
-    background-color: #0c40e6;
-    border-radius: 0;
+#buy-tickets:hover, #departures:hover {
+    background-color: #b7c5d6;
 }
 
 #submit {
     color: #ffffff;
     background-color: #0c40e6;
+}
+
+#first, #second, #third {
+    width: 33.3%;
+}
+
+.modal {
+    text-align: center;
+    background-image: url("../images/CCJPA_Route_Map_June_2018.jpeg");
+    background-size: contain;
+}
+
+h4 {
+    padding: 15px;
+    background-color: #0c40e6;
+    color: #ffffff;
+}
+
+.btn-flat, .btn-flat:hover, .btn-flat:focus .btn-flat:active {
+    background-color: #b7c5d6;
+    color: #ffffff;
 }
