@@ -69,26 +69,35 @@
       $(input).append("<td>" + childSnapshot.val().trainName);
       $(input).append("<td>" + childSnapshot.val().destination);
       $(input).append("<td>" + childSnapshot.val().frequencyOfTrain);
-      // $(input).append("<td>" + childSnapshot.val().firstTrain);
 
-      
-      var firstTrainConverted = moment(frequencyOfTrain, "HH:mm").subtract(1, "years");
-      console.log(firstTrainConverted);
+      var timeArr = firstTrain.split(":");
+      var trainTime = moment().hours(timeArr[0]).minutes(timeArr[1]);
+
+      var frequencyOfTrain = childSnapshot.val().frequencyOfTrain
 
       var currentTime = moment();
-      console.log("<----Current Time: " + moment(currentTime).format("HH:mm"));
+      console.log("<--- Current Time: " + moment(currentTime).format("HH:mm"));
 
-      // var diffTime = moment().diff(moment(firstTrainConverted), "minutes");
-      // console.log("<-----Difference in Time: " + diffTime);
+      var firstTrainConverted = moment(trainTime, "HH:mm").subtract(1, "years");
+      console.log("<--- First Time: "+ firstTrainConverted);
 
-      // var tRemainder = diffTime % frequencyOfTrain;
-      // console.log(tRemainder);
+      var diffTime = moment().diff(moment(firstTrainConverted), "minutes");
+      console.log("<--- Difference in Time: " + diffTime);
 
-      // var nextArrival = frequencyOfTrain - tRemainder;
-      // console.log("Minutes Till Train: " + nextArrival);
+      var timeRemaining = diffTime % frequencyOfTrain;
+      console.log("<--- Remainder: "+timeRemaining);
+
+      var nextArrival = frequencyOfTrain - timeRemaining;
+      console.log("<--- Minutes Till Train: " + nextArrival);
+      $("<td>").append(nextArrival);
+
+      // $("tbody").append(nextArrival);
+      // $(nextArrival).append("<td>")
 
       // var nextTrain = moment().add(nextArrival, "minutes");
-      // $(nextTrain).append("<td>" + childSnapshot.val().nextTrain);
+      // console.log(nextTrain)
+      // $(nextTrain).append("<tc>");
+      
 
     }), function(errorObject){
       console.log("The read failed: " + errorObject);
