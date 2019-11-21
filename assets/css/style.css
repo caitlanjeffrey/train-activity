@@ -58,11 +58,21 @@ h4 {
 
 .card {
     color: #b7c5d6;
+
+}
+
+.card-columns {
+    margin: 10px;
+}
+
+#green-energy {
+    margin: 10px;
 }
 
 .bg-primary {
     background-color: #b7c5d6;
 }
+
 .blockquote {
     border-left: 5px solid #0c40e6;
 }

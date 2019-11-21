@@ -84,13 +84,14 @@
       $("#book-tickets").hide()
       $(".card").hide()
       $("table").show()
-
+      console.log("hi")
     })
 
     $("#buy-tickets").on("click", function(){
       $("#book-tickets").show()
       $(".card").show()
       $("table").hide()
+      console.log("hello")
     })
 
     $(".modal-trigger").on("click", function(){
